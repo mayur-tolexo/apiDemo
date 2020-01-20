@@ -7,10 +7,13 @@ import (
 //BuildResp will build response model
 func BuildResp(c *gin.Context, data interface{}, err error) {
 	httpCode := getStatusCode(err)
-	c.JSON(httpCode, gin.H{
-		"data":  data,
-		"error": err,
-	})
+	resp := gin.H{
+		"data": data,
+	}
+	if err != nil {
+		resp["error"] = err
+	}
+	c.JSON(httpCode, resp)
 }
 
 func getStatusCode(err error) (code int) {
