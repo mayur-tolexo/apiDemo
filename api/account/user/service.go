@@ -1,8 +1,10 @@
 package user
 
 import (
-	"github.com/mayur-ralali/apiDemo/api/account/user/util"
 	"github.com/gin-gonic/gin"
+	"github.com/mayur-ralali/apiDemo/api/account/user/model"
+	"github.com/mayur-ralali/apiDemo/api/account/user/util"
+	"github.com/mayur-ralali/apiDemo/lib"
 	"github.com/mayur-tolexo/flash"
 )
 
@@ -16,8 +18,10 @@ type User struct {
 //ListUser will list user details
 func (*User) ListUser(c *gin.Context) {
 
-	var (data interface{}
-	err error)
+	var (
+		data interface{}
+		err  error
+	)
 	if err = util.ValidateListUser(c); err == nil {
 		data, err = util.ProcessListUser(c)
 	}
@@ -30,6 +34,7 @@ func (*User) CreateUser(c *gin.Context) {
 	var (
 		req  model.CreateUser
 		data interface{}
+		err  error
 	)
 	if req, err = util.ValidateCreateUser(c); err == nil {
 		data, err = util.ProcessCreateUser(req)
