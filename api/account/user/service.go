@@ -10,7 +10,7 @@ import (
 
 //User services
 type User struct {
-	flash.Server `v:"1" root:"/user/"`
+	flash.Server `prefix:"/account/" v:"1" root:"/user/"`
 	listUser     flash.GET  `url:"/"`
 	createUser   flash.POST `url:"/"`
 }
