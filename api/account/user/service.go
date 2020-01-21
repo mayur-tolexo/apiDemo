@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/mayur-ralali/apiDemo/api/account/user/model"
 	"github.com/mayur-ralali/apiDemo/api/account/user/util"
+	"github.com/mayur-ralali/apiDemo/constant"
 	"github.com/mayur-ralali/apiDemo/lib"
 	"github.com/mayur-tolexo/flash"
 )
@@ -13,6 +14,10 @@ type User struct {
 	flash.Server `prefix:"/account/" v:"1" root:"/user/"`
 	listUser     flash.GET  `url:"/"`
 	createUser   flash.POST `url:"/"`
+}
+
+func init() {
+	lib.AddService(constant.Account, &User{})
 }
 
 //ListUser will list user details
