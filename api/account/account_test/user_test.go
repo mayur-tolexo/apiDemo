@@ -33,7 +33,7 @@ func TestListUser(t *testing.T) {
 
 	for _, ctc := range tc {
 		t.Run(ctc.name, func(t *testing.T) {
-			req, err := http.NewRequest("GET", "http://localhost:3030/account/v1/user/", nil)
+			req, err := http.NewRequest("GET", "/account/v1/user/", nil)
 			if err != nil {
 				t.Fatalf("could not create request: %v", err)
 			}
