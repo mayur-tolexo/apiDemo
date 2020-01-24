@@ -1,14 +1,15 @@
-package main
+package account
 
 import (
-	"github.com/mayur-ralali/apiDemo/api/account/user"
 	"github.com/mayur-ralali/apiDemo/api/account/address"
+	"github.com/mayur-ralali/apiDemo/api/account/user"
 	"github.com/mayur-tolexo/flash"
 )
 
-func main() {
+//SetupRouter will setup account handlers
+func SetupRouter() *flash.Server {
 	router := flash.Default()
 	router.AddService(&user.User{})
 	router.AddService(&address.Address{})
-	router.Start(":3030")
+	return &router
 }
