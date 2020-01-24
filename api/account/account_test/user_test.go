@@ -1,4 +1,4 @@
-package account
+package account_test
 
 import (
 	"net/http"
@@ -7,8 +7,15 @@ import (
 	"testing"
 
 	"github.com/mayur-ralali/apiDemo/api/account"
+	"github.com/mayur-tolexo/flash"
 	"github.com/stretchr/testify/assert"
 )
+
+var router *flash.Server
+
+func init() {
+	router = account.SetupRouter()
+}
 
 func TestListUser(t *testing.T) {
 	tc := []struct {
@@ -31,7 +38,6 @@ func TestListUser(t *testing.T) {
 				t.Fatalf("could not create request: %v", err)
 			}
 			w := httptest.NewRecorder()
-			router := account.SetupRouter()
 			router.ServeHTTP(w, req)
 			assert.Equal(t, ctc.status, w.Code)
 			assert.Equal(t, ctc.expected, strings.TrimSuffix(w.Body.String(), "\n"))

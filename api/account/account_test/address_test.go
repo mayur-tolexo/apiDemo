@@ -1,4 +1,4 @@
-package account
+package account_test
 
 import (
 	"net/http"
@@ -6,7 +6,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mayur-ralali/apiDemo/api/account"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -31,7 +30,6 @@ func TestListAddress(t *testing.T) {
 				t.Fatalf("could not create request: %v", err)
 			}
 			w := httptest.NewRecorder()
-			router := account.SetupRouter()
 			router.ServeHTTP(w, req)
 			assert.Equal(t, ctc.status, w.Code)
 			assert.Equal(t, ctc.expected, strings.TrimSuffix(w.Body.String(), "\n"))
