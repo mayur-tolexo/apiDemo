@@ -11,5 +11,5 @@ func SetupRouter() *flash.Server {
 	router := flash.Default()
 	router.AddService(&user.User{})
 	router.AddService(&address.Address{})
-	return &router
+	return router
 }
