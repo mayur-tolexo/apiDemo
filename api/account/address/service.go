@@ -2,8 +2,8 @@ package address
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mayur-ralali/apiDemo/api/account/address/util"
-	"github.com/mayur-ralali/apiDemo/lib"
+	"github.com/mayur-tolexo/apiDemo/api/account/address/util"
+	"github.com/mayur-tolexo/apiDemo/lib"
 	"github.com/mayur-tolexo/flash"
 )
 

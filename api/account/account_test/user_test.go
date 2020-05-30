@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mayur-ralali/apiDemo/api/account"
+	"github.com/mayur-tolexo/apiDemo/api/account"
 	"github.com/mayur-tolexo/flash"
 	"github.com/stretchr/testify/assert"
 )

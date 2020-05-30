@@ -2,7 +2,7 @@ package util
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mayur-ralali/apiDemo/api/account/address/model"
+	"github.com/mayur-tolexo/apiDemo/api/account/address/model"
 )
 
 //ProcessListAddress will process the list address request

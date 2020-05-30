@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/mayur-ralali/apiDemo/api/account"
+	"github.com/mayur-tolexo/apiDemo/api/account"
 )
 
 func main() {

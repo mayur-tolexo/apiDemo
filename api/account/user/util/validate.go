@@ -2,7 +2,7 @@ package util
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mayur-ralali/apiDemo/api/account/user/model"
+	"github.com/mayur-tolexo/apiDemo/api/account/user/model"
 )
 
 //ValidateListUser will validate the list user request

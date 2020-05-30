@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/mayur-ralali/apiDemo/db"
+	"github.com/mayur-tolexo/apiDemo/db"
 )
 
 type ListUser struct {

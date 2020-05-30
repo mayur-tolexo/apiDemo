@@ -2,9 +2,9 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mayur-ralali/apiDemo/api/account/user/model"
-	"github.com/mayur-ralali/apiDemo/api/account/user/util"
-	"github.com/mayur-ralali/apiDemo/lib"
+	"github.com/mayur-tolexo/apiDemo/api/account/user/model"
+	"github.com/mayur-tolexo/apiDemo/api/account/user/util"
+	"github.com/mayur-tolexo/apiDemo/lib"
 	"github.com/mayur-tolexo/flash"
 )
 

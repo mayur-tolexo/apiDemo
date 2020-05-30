@@ -1,8 +1,8 @@
 package account
 
 import (
-	"github.com/mayur-ralali/apiDemo/api/account/address"
-	"github.com/mayur-ralali/apiDemo/api/account/user"
+	"github.com/mayur-tolexo/apiDemo/api/account/address"
+	"github.com/mayur-tolexo/apiDemo/api/account/user"
 	"github.com/mayur-tolexo/flash"
 )
 
